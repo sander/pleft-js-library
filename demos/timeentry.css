@@ -1,0 +1,29 @@
+.te-entry {
+  width: 6em;
+  border: 1px solid gray;
+  padding-left: 2px;
+}
+.te-entry input {
+  width: 100%;
+  padding: 0;
+  outline: none;
+  border: none;
+}
+.te-up, .te-down {
+  display: block;
+  width: 18px;
+  height: 10px;
+  margin-left: -30px;
+  position: relative;
+  float: right;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+}
+.te-up {
+  background-image: url(te-up.png);
+}
+.te-down {
+  background-image: url(te-down.png);
+  margin-top: 10px;
+}

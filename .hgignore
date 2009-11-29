@@ -1,0 +1,5 @@
+syntax: glob
+
+*.swp
+third-party/closure
+third-party/SoyToJsSrcCompiler.jar
