@@ -348,6 +348,11 @@ pleft.caleftar.Caleftar.prototype.updateDay = function(year, month, day) {
 
 pleft.caleftar.Caleftar.prototype.updateSelected = function() {
   this.selected.innerHTML = '';
+
+  if (this.times.length == 0) {
+    this.selected.innerHTML = 'No times are selected yet.';
+  }
+
   for (var i = 0; i < this.times.length; i++) {
     var elt = goog.dom.createDom('div', 'dp-date');
     this.selected.appendChild(elt);
@@ -425,6 +430,13 @@ pleft.caleftar.DayPopUp = function(dp, elt) {
   this.popUp.style.overflow = 'hidden';
   elt.appendChild(this.popUp);
 
+  this.popUp.style.width = this.popUp.style.height = '128px';
+  this.popUp.style.overflow = 'visible';
+  this.popUp.style.marginLeft = '-32px';
+  this.popUp.style.marginTop = '-96px';
+
+  // TODO: make the transition smoother before re-applying it.
+  if (false) {
   var anim = new goog.fx.dom.Resize(this.popUp,
                                     [64, 64], [128, 128],
                                     200, goog.fx.easing.easeOut);
@@ -437,6 +449,7 @@ pleft.caleftar.DayPopUp = function(dp, elt) {
   anim = new pleft.fx.Margin(this.popUp, [0, -64], [-32, -96],
                              200, goog.fx.easing.easeOut);
   anim.play();
+  }
 
   var content = goog.dom.createDom('div', 'dp-content');
   this.popUp.appendChild(content);

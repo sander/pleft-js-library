@@ -1,41 +1,36 @@
-.dp-picker {
-  width: 778px;
-}
 .dp-picker a {
   text-decoration: none;
 }
 .dp-selected-container {
-  width: 210px;
-  float: left;
+  width: 562px;
+  margin-top: 10px;
 }
 .dp-selected-times {
-  background: white;
-  height: 376px;
-  border: 1px solid #80c18d;
-  padding: 4px;
   overflow-x: none;
   overflow-y: auto;
+  color: #666;
 }
 .dp-selected-header {
-  height: 18px;
+  float: left;
+  width: 113px;
+  margin: 0;
 }
 .dp-week-days {
   width: 448px;
-  margin-left: 333px;
+  margin-left: 115px;
   height: 18px;
 }
 .dp-week-days span {
   width: 64px;
   display: block;
   float: left;
-  color: #80c18d;
+  color: #666;
 }
 .dp-container {
-  border: 1px solid #80c18d;
+  border: 1px solid #ccc;
   height: 384px;
   background: #fff;
   width: 560px;
-  float: right;
   overflow: hidden;
 }
 .dp-label {
@@ -43,6 +38,7 @@
   padding: 8px;
   font-size: 18px;
   width: 95px;
+  position: absolute;
 }
 .dp-label .dp-choose {
   cursor: pointer;
@@ -57,7 +53,7 @@
 .dp-days {
   width: 448px;
   float: right;
-  border-left: 1px solid #b0e6ba;
+  border-left: 1px solid #ccc;
 }
 .dp-month .dp-day {
   color: #999;
@@ -156,9 +152,10 @@
 }
 .dp-entry.te-entry input {
   border: 1px solid #0b3136 !important;
-  width: 84px;
-  font-size: 14px;
+  width: 80px;
+  font-size: 13px;
   padding: 2px;
+  margin-top: 2px;
 }
 .dp-entry.te-entry .te-up {
   margin-top: 3px;
@@ -217,6 +214,9 @@
   border-radius: 3px;
   padding: 2px 4px;
   margin-bottom: 2px;
+  float: left;
+  width: 130px;
+  margin-right: 2px;
 }
 .dp-date span {
   cursor: pointer;
