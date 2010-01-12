@@ -145,16 +145,16 @@ pleft.ui.TimeEntry.prototype.onClick = function(event) {
   } else if (this.input.createTextRange) { // Check against bounding boxes
     var range = this.input.createTextRange();
     var convert = function(value) {
-      return { thin: 2, medium: 4, thick: 6 }[value] || value;
+      return { thin: 2, medium: 4, thick: 6 }[value] || value || 0;
     };
-    var offsetX = event.clientX + document.documentElement.scrollLeft -
+    var offsetX = event.clientX + window.document.documentElement.scrollLeft -
       (this.input.offsetLeft
        + parseInt(convert(this.input.style.borderLeftWidth), 10)) -
       range.offsetLeft; // Position - left edge - alignment
     for (var field = 0; field <= Math.max(1, this.secondField,
                                           this.ampmField); field++) {
       var end = (field != this.ampmField ? (field * fieldSize) + 2 :
-        this.ampmField * fieldSize + this.settings.ampmPrefox.length +
+        this.ampmField * fieldSize + this.settings.ampmPrefix.length +
         this.settings.ampmNames[0].length);
       range.collapse();
       range.moveEnd('character', end);
